@@ -14,7 +14,7 @@ RUN yum install -y epel-release \
     && rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm \
     && yum clean all \
     && yum update -y \
-    && yum install -y php72w-devel php72w-openssl php72w-gd php72w-mbstring php72w-mysqli
+    && yum install -y php72w-devel php72w-openssl php72w-gd php72w-mbstring php72w-mysqli php72w-bcmath php72w-opcache php72w-pecl-redis  php72w-pecl-mongodb  php72w-pecl-memcached php72w-pecl-xdebug
 
 # composer
 RUN curl -sS https://getcomposer.org/installer | php \
