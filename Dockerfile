@@ -2,13 +2,13 @@ FROM centos:7
 MAINTAINER WICON.WANG
 
 #version defined
-ENV SWOOLE_VERSION 4.4.4
-ENV EASYSWOOLE_VERSION 3.3.0
+ENV SWOOLE_VERSION 4.4.12
+ENV EASYSWOOLE_VERSION 3.3.2
 
 #update core
 RUN yum clean all
 RUN yum update -y
-RUN yum install -y curl zip unzip  wget openssl-devel gcc-c++ make autoconf git epel-release
+RUN yum install -y curl zip unzip  wget openssl-devel gcc-c++ make autoconf git epel-release vim
     
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm \ 
     && yum clean all \
